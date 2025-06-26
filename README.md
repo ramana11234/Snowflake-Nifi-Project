@@ -49,28 +49,21 @@ This project showcases a fully automated, real-time data pipeline integrating **
 ---
 
 ## 📁 Project Structure
-
+```plaintext
 Snowflake-Nifi-Project/
 ├── docker/
 │   ├── docker-compose.yml        # Docker setup for EC2 instance: NiFi, Jupyter, ZooKeeper
 │   └── .env                      # Environment variables (e.g., ports, credentials)
-│
 ├── notebooks/
 │   └── data_generator.ipynb      # Jupyter Notebook for generating sample data
-│
 ├── nifi/
 │   └── flow_template.xml         # Apache NiFi flow template for data ingestion to S3
-│
 ├── snowflake/
 │   ├── create_stage.sql          # Create external stage and external table
 │   ├── create_streams.sql        # Define Snowflake streams on target tables
 │   └── create_tasks.sql          # Create Snowflake tasks for automation
-│
 ├── s3/
 │   └── sample_data.csv           # Sample data used for testing (can mimic S3 content locally)
-│
 ├── docs/
 │   └── architecture_diagram.png  # Visual diagram of the end-to-end pipeline
-│
 └── README.md                     # Project overview and setup instructions
-
